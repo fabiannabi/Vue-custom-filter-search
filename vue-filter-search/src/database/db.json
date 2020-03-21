@@ -3,79 +3,86 @@
     {
       "kanji": "一",
       "meaning": "Uno",
-      "onyomi": "Ka, kan, de, te",
-      "kunyomi": "hi",
+      "Onyomi": "Ichi",
+      "kunyomi": "Hitotsu",
       "appears": "uno"
     },
     {
       "kanji": "火",
-      "meaning": "fuego",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
+      "meaning": "Fuego",
+      "Onyomi": "Ka",
+      "kunyomi": "Hi",
       "appears": "fuego"
     },
     {
       "kanji": "火山",
-      "meaning": "volcan",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
+      "meaning": "Volcan",
+      "Onyomi": "Kazan",
+      "kunyomi": "",
       "appears": "fuego volcan montaña"
     },
     {
       "kanji": "月",
-      "meaning": "luna",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
+      "meaning": "Luna",
+      "Onyomi": "Gatsu, Getsu",
+      "kunyomi": "Tsuki",
       "appears": "luna"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "耳",
+      "meaning": "Oreja",
+      "Onyomi": "ji",
+      "kunyomi": "Mimi",
+      "appears": "oreja cuerpo"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "聞",
+      "meaning": "Escuchar, Preguntar",
+      "Onyomi": "Mon, Fun",
+      "kunyomi": "Kiku",
+      "appears": "oreja escuchar preguntar"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "女",
+      "meaning": "Mujer",
+      "Onyomi": "Jou",
+      "kunyomi": "Onna",
+      "appears": "mujer"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "子",
+      "meaning": "Niño",
+      "Onyomi": "Shi",
+      "kunyomi": "Ko",
+      "appears": "niño"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "毎",
+      "meaning": "Cada-",
+      "Onyomi": "Mai",
+      "kunyomi": "",
+      "appears": "cada"
     },
     {
-      "kanji": "一月",
-      "meaning": "Enero",
-      "Onyomi": "Ka , ",
-      "kunyomi": "hi",
-      "appears": "uno luna enero"
+      "kanji": "毎月",
+      "meaning": "Cada Mes",
+      "Onyomi": "Maitsuki",
+      "kunyomi": "",
+      "appears": "cada mes luna"
     },
     {
-      "kanji": "十一月",
-      "meaning": "Noviembre",
-      "Onyomi": "",
-      "kunyomi": "juuichigatsu",
-      "appears": "diez uno luna"
+      "kanji": "女性",
+      "meaning": "Femenino",
+      "Onyomi": "josei",
+      "kunyomi": "",
+      "appears": "mujer sexo femenino"
+    },
+    {
+      "kanji": "男",
+      "meaning": "Hombre",
+      "Onyomi": "Dan, Nan",
+      "kunyomi": "Otoko",
+      "appears": "hombre"
     }
   ]
 }

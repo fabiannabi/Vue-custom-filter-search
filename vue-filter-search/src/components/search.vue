@@ -15,7 +15,7 @@
             </div>
             <div class="back">
               <p class="kanji_reading">Readings</p>
-              <p class="kanji_readingOn">音読み: {{ kanji.onyomi }}</p>
+              <p class="kanji_readingOn">音読み: {{ kanji.Onyomi }}</p>
               <p class="kanji_readingKun">訓読み: {{ kanji.kunyomi }}</p>
             </div>
           </div>
