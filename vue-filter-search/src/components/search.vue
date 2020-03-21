@@ -10,13 +10,13 @@
         <div class="card_container">
           <div class="whole_card">
             <div class="front">
-              <p class="kanji_kanji">{{kanji.kanji}}</p>
-              <p class="kanji_meaning">{{kanji.meaning}}</p>
+              <p class="kanji_kanji">{{ kanji.kanji }}</p>
+              <p class="kanji_meaning">{{ kanji.meaning }}</p>
             </div>
             <div class="back">
               <p class="kanji_reading">Readings</p>
-              <p class="kanji_readingOn">音読み: {{kanji.onyomi}}</p>
-              <p class="kanji_readingKun">訓読み: {{kanji.kunyomi}}</p>
+              <p class="kanji_readingOn">音読み: {{ kanji.onyomi }}</p>
+              <p class="kanji_readingKun">訓読み: {{ kanji.kunyomi }}</p>
             </div>
           </div>
         </div>
@@ -31,87 +31,11 @@ export default {
   data() {
     return {
       search: "",
-      kanjis: [
-        {
-          kanji: "一",
-          meaning: "Uno",
-          onyomi: "Ka, kan, de, te",
-          kunyomi: "hi",
-          appears: "uno"
-        },
-        {
-          kanji: "火",
-          meaning: "fuego",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "fuego"
-        },
-        {
-          kanji: "火山",
-          meaning: "volcan",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "fuego volcan montaña"
-        },
-        {
-          kanji: "月",
-          meaning: "luna",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "luna"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "一月",
-          meaning: "Enero",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "uno luna enero"
-        },
-        {
-          kanji: "十一月",
-          meaning: "Noviembre",
-          Onyomi: "Ka , ",
-          kunyomi: "hi",
-          appears: "diez uno luna"
-        }
-      ]
+      kanjis: []
     };
   },
+  methods: {},
+
   computed: {
     //esto regresa un nuevo array llamado FilteredSearch
     FilteredSearch: function() {
@@ -121,6 +45,12 @@ export default {
         return kanji.appears.match(this.search.toLowerCase());
       });
     }
+  },
+  created() {
+    this.$http.get("http://localhost:3000/kanjis").then(function(data) {
+      console.log(data);
+      this.kanjis = data.body;
+    });
   }
 };
 </script>
@@ -155,11 +85,11 @@ input {
   font-size: 48px;
   font-family: $kanjiFont;
   text-align: center;
-  color: hsl(3, 72%, 20%);
+  color: hsl($mainColor, 72%, 20%);
   border-radius: 30px;
-  background-color: hsl(3, 72%, 80%);
+  background-color: hsl($mainColor, 72%, 80%);
   border-radius: 30px;
-  box-shadow: inset 1 -1px 0px hsl(3, 10%, 73%);
+  box-shadow: inset 0px -3px 5px hsl($mainColor, 10%, 73%);
 }
 
 .cardbody {
@@ -189,7 +119,7 @@ input {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: hsl(3, 100%, 80%);
+  background-color: hsl($mainColor, 100%, 80%);
   border-radius: 10px;
   box-shadow: $shadow;
 }
@@ -199,11 +129,11 @@ input {
   font-weight: bold;
   font-family: $kanjiFont;
   margin: 2rem 0 0 0;
-  color: hsl(3, 100%, 10%);
+  color: hsl($mainColor, 100%, 10%);
   border-bottom: solid 1px black;
 }
 .kanji_meaning {
-  color: hsl(3, 100%, 25%);
+  color: hsl($mainColor, 100%, 25%);
   text-align: center;
   font-size: 70px;
   font-family: $kanjiFont;
@@ -215,7 +145,7 @@ input {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: hsl(3, 100%, 70%);
+  background-color: hsl($mainColor, 100%, 70%);
   transform: rotateY(180deg);
   border-radius: 10px;
   box-shadow: $shadow;
@@ -225,19 +155,19 @@ input {
   font-size: 60px;
   font-family: $kanjiFont;
   margin: 3.6rem 0 0 0;
-  color: hsl(3, 100%, 10%);
+  color: hsl($mainColor, 100%, 10%);
   border-bottom: solid 1px black;
 }
 .kanji_readingOn {
   text-align: start;
-  color: hsl(3, 100%, 15%);
+  color: hsl($mainColor, 100%, 15%);
   font-size: 46px;
   font-family: $kanjiFont;
   margin: 1rem 0 0 1rem;
 }
 .kanji_readingKun {
   text-align: start;
-  color: hsl(3, 100%, 15%);
+  color: hsl($mainColor, 100%, 15%);
   font-size: 46px;
   font-family: $kanjiFont;
   margin: 1rem 0 0 1rem;
@@ -257,22 +187,21 @@ input {
     margin: 0.5rem 2rem;
   }
   input {
-    width: 50%;
     margin-top: 2rem;
     border-radius: 10px;
     font-size: 24px;
     font-family: $kanjiFont;
     text-align: center;
-    width: 90%;
-    color: hsl(3, 72%, 20%);
+    width: 500px;
+    color: hsl($mainColor, 72%, 20%);
     border-radius: 30px;
-    background-color: hsl(3, 72%, 80%);
+    background-color: hsl($mainColor, 72%, 80%);
     border-radius: 30px;
-    box-shadow: inset 1 -1px 0px hsl(3, 10%, 73%);
+    box-shadow: inset 0px -3px 5px hsl($mainColor, 20%, 80%);
   }
   .kanji_kanji {
     text-align: center;
-    color: hsl(3, 100%, 10%);
+    color: hsl($mainColor, 100%, 10%);
     font-size: 30px;
     font-weight: bold;
     font-family: $kanjiFont;
@@ -283,29 +212,28 @@ input {
     text-align: center;
     font-size: 40px;
     font-family: $kanjiFont;
-    color: hsl(3, 100%, 25%);
+    color: hsl($mainColor, 100%, 25%);
     margin: 3rem 0 0 0;
   }
   .kanji_reading {
-    color: hsl(3, 100%, 10%);
+    color: hsl($mainColor, 100%, 10%);
     text-align: center;
     font-size: 24px;
     font-family: $kanjiFont;
-
-    margin: 1rem 0 0 0;
+    margin: 2.4rem 0 0 0;
     border-bottom: solid 1px black;
   }
   .kanji_readingOn {
     text-align: start;
     font-size: 22px;
-    color: hsl(3, 100%, 15%);
+    color: hsl($mainColor, 100%, 15%);
     font-family: $kanjiFont;
     margin: 1rem 0 0 1rem;
   }
   .kanji_readingKun {
     text-align: start;
     font-size: 22px;
-    color: hsl(3, 100%, 15%);
+    color: hsl($mainColor, 100%, 15%);
     font-family: $kanjiFont;
     margin: 1rem 0 0 1rem;
   }

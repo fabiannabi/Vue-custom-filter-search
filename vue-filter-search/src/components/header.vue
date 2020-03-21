@@ -36,11 +36,11 @@ ligth : hsl(3, 50%, 90%)
 }
 
 body {
-  background-color: hsl(3, 100%, 90%);
+  background-color: hsl($mainColor, 100%, 90%);
 }
 .header-title {
   display: flex;
-  background-color: hsl(3, 100%, 70%);
+  background-color: hsl($mainColor, 100%, 70%);
   margin: 1rem 1rem;
   align-items: center;
   justify-content: start;
